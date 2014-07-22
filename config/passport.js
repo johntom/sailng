@@ -37,14 +37,16 @@ module.exports.passport = {
     }
   },
 
-  facebook: {
-    name: 'Facebook',
-    protocol: 'oauth2',
-    options: {
-      clientID: 'your-client-id',
-      clientSecret: 'your-client-secret'
-    }
-  },
+    facebook: {
+        name: 'Facebook',
+        protocol: 'oauth2',
+        //  strategy: require('passport-facebook').Strategy,
+        options: {
+            clientID: '151736625015548',
+            clientSecret: 'c7c0296b8187c6c1169a2b1a706dcb8c'
+        }
+    },
+
 
   google: {
     name: 'Google',

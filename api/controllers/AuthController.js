@@ -104,6 +104,7 @@ var AuthController = {
    * @param {Object} res
    */
   provider: function (req, res) {
+      console.log('in provider one')
     passport.endpoint(req, res);
   },
 
@@ -143,14 +144,17 @@ var AuthController = {
         else {
             // jrt
 
-            console.log('===api/controllers/AuthController.js============================================');
-            console.log('currently logged in user is: ' + req.user.username);
+          //  console.log('===api/controllers/AuthController.js============================================');
+          //  console.log('currently logged in user is: ' + req.user.username);
             // must set session here !!!jrt -jul 19 2014
+
             req.session.authenticated = true;//jrt
             req.session.user = user;//jrt
-            console.log('currently logged in user  req.session.authenticated : ' + req.session.authenticated);
-            console.log('================================================================================');
-            console.log('================================================================================');
+
+
+           // console.log('currently logged in user  req.session.authenticated : ' + req.session.authenticated);
+           // console.log('================================================================================');
+           // console.log('================================================================================');
           res.redirect('/');
         }
       });

@@ -44,8 +44,13 @@ module.exports.routes = {
 
   'post /auth/local': 'AuthController.callback',
   'post /auth/local/:action': 'AuthController.callback',
-  'post /auth/google': 'AuthController.callback',
-  'post /auth/google/:action': 'AuthController.callback',
+
+    'get /auth/:provider': 'AuthController.provider',
+    'get /auth/:provider/callback': 'AuthController.callback',
+
+
+//  'post /auth/google': 'AuthController.callback',
+//  'post /auth/google/:action': 'AuthController.callback',
 
 //
 //   'GET /auth/auth': 'AuthController.register',
